@@ -13,19 +13,19 @@ env:
   PIPELINE_USER_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   PIPELINE_USER_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   SAM_TEMPLATE: template.yaml
-  TESTING_STACK_NAME: sam-pipeline-demo
-  TESTING_PIPELINE_EXECUTION_ROLE: arn:aws:iam::576935772072:role/aws-sam-cli-managed-dev-pipe-PipelineExecutionRole-12V54PZKX3Q1U
-  TESTING_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::576935772072:role/aws-sam-cli-managed-dev-p-CloudFormationExecutionR-CNXWMPMJSZ1A
-  TESTING_ARTIFACTS_BUCKET: aws-sam-cli-managed-dev-pipeline-artifactsbucket-1n5zx275xenmv
+  TESTING_STACK_NAME: sam-app
+  TESTING_PIPELINE_EXECUTION_ROLE: arn:aws:iam::576935772072:role/aws-sam-cli-managed-prod-pip-PipelineExecutionRole-SHGA9V35S7SO
+  TESTING_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::576935772072:role/aws-sam-cli-managed-prod-CloudFormationExecutionR-HLY2CW5LVVRU
+  TESTING_ARTIFACTS_BUCKET: aws-sam-cli-managed-prod-pipeline-artifactsbucket-1i86m7630ppli
   # If there are functions with "Image" PackageType in your template,
   # uncomment the line below and add "--image-repository ${TESTING_IMAGE_REPOSITORY}" to
   # testing "sam package" and "sam deploy" commands.
   # TESTING_IMAGE_REPOSITORY = '0123456789.dkr.ecr.region.amazonaws.com/repository-name'
   TESTING_REGION: us-east-2
   PROD_STACK_NAME: sam-app
-  PROD_PIPELINE_EXECUTION_ROLE: arn:aws:iam::576935772072:role/aws-sam-cli-managed-dev-pipe-PipelineExecutionRole-12V54PZKX3Q1U
-  PROD_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::576935772072:role/aws-sam-cli-managed-dev-p-CloudFormationExecutionR-CNXWMPMJSZ1A
-  PROD_ARTIFACTS_BUCKET: aws-sam-cli-managed-dev-pipeline-artifactsbucket-1n5zx275xenmv
+  PROD_PIPELINE_EXECUTION_ROLE: arn:aws:iam::576935772072:role/aws-sam-cli-managed-prod-pip-PipelineExecutionRole-SHGA9V35S7SO
+  PROD_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::576935772072:role/aws-sam-cli-managed-prod-CloudFormationExecutionR-HLY2CW5LVVRU
+  PROD_ARTIFACTS_BUCKET: aws-sam-cli-managed-prod-pipeline-artifactsbucket-1i86m7630ppli
   # If there are functions with "Image" PackageType in your template,
   # uncomment the line below and add "--image-repository ${PROD_IMAGE_REPOSITORY}" to
   # prod "sam package" and "sam deploy" commands.
